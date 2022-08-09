@@ -2,7 +2,7 @@
 name: test-network
 version: 1.0.0
 client:
-  organization: peer.org1.example.com
+  organization: Org1
   connection:
     timeout:
       peer:
