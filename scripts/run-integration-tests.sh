@@ -7,6 +7,7 @@ set -euo pipefail
 export ORG_HYPERLEDGER_FABRIC_SDK_LOGLEVEL=TRACE
 export ORG_HYPERLEDGER_FABRIC_CA_SDK_LOGLEVEL=TRACE
 export ORG_HYPERLEDGER_FABRIC_SDK_LOG_EXTRALOGLEVEL=10
+export FAB_CONFIG_GEN_VERS=v2.1
 
 cd "$(dirname "$0")"
 source pull-fabric-images.sh
