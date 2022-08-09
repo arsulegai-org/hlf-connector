@@ -52,20 +52,16 @@ kafka:
 spring:
   profiles: intg
 fabric:
-  localhostReportAddress: true
+  localhostReportAddress: false
   wallet:
-    path: wallet
+    path: "src/test/resources/testwallet"
     adminUser:
       name: admin
     clientUser:
       name: clientUser
   orgConnectionConfig:
-    path: config
-    filename: connection.yaml
-  events:
-    enable: false
-    chaincode: channel1
-    block: channel1
+    path: "src/test/resources/testwallet"
+    filename: connection-intg.yaml
   client:
     rest:
-      apikey: abc
+      apikey: test
