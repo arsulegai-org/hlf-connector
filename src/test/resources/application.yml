@@ -60,7 +60,7 @@ fabric:
     clientUser:
       name: clientUser
   orgConnectionConfig:
-    path: "src/test/resources/testwallet"
+    path: "src/test/resources/integration"
     filename: connection-intg.yaml
   client:
     rest:
