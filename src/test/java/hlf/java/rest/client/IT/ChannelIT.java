@@ -5,11 +5,6 @@ import hlf.java.rest.client.model.ClientResponseModel;
 import hlf.java.rest.client.model.Orderer;
 import hlf.java.rest.client.model.Peer;
 import hlf.java.rest.client.service.ChannelService;
-import java.io.IOException;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
 import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.MethodOrderer;
@@ -19,6 +14,12 @@ import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
+
+import java.io.IOException;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
 @SpringBootTest
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
@@ -53,7 +54,7 @@ public class ChannelIT {
 
       Peer peer = new Peer();
       peer.setName("peer1");
-      peer.setGrpcUrl("grpc://localhost:7051");
+      peer.setGrpcUrl("grpc://localhost:7056");
       peer.setCertificate(
           FileUtils.readFileToString(
               Paths.get(
@@ -93,7 +94,7 @@ public class ChannelIT {
 
       Peer peer = new Peer();
       peer.setName("peer1");
-      peer.setGrpcUrl("grpc://localhost:7051");
+      peer.setGrpcUrl("grpc://localhost:7056");
       peer.setCertificate(
           FileUtils.readFileToString(
               Paths.get(
