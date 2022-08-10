@@ -11,11 +11,11 @@ organizations:
   Org1:
     mspid: Org1MSP
     peers:
-    - peer.org1.example.com
+    - peer1.org1.example.com
     certificateAuthorities:
     - ca.org1.example.com
 peers:
-  peer.org1.example.com:
+  peer1.org1.example.com:
     url: grpcs://localhost:7056
     tlsCACerts:
       pem: |
@@ -36,8 +36,8 @@ peers:
         -----END CERTIFICATE-----
 
     grpcOptions:
-      ssl-target-name-override: peer.org1.example.com
-      hostnameOverride: peer.org1.example.com
+      ssl-target-name-override: peer1.org1.example.com
+      hostnameOverride: peer1.org1.example.com
 certificateAuthorities:
   ca.org1.example.com:
     url: https://localhost:7054
@@ -60,5 +60,5 @@ certificateAuthorities:
         Xnx0uoKz7g==
         -----END CERTIFICATE-----
 
-httpOptions:
-      verify: false
+    httpOptions:
+        verify: false
