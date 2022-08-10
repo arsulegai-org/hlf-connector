@@ -8,7 +8,7 @@ client:
       peer:
         endorser: '300'
 organizations:
-  Walmart:
+  Org1:
     mspid: Org1MSP
     peers:
     - peer.org1.example.com
