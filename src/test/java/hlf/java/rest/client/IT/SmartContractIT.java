@@ -1,21 +1,9 @@
 package hlf.java.rest.client.IT;
 
-import static java.lang.String.format;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.fail;
-
 import hlf.java.rest.client.model.ChaincodeOperations;
 import hlf.java.rest.client.model.ChaincodeOperationsType;
 import hlf.java.rest.client.service.ChaincodeOperationsService;
 import hlf.java.rest.client.service.HFClientWrapper;
-import java.io.IOException;
-import java.nio.file.Paths;
-import java.util.Collection;
-import java.util.LinkedList;
-import java.util.Optional;
-import java.util.Set;
 import org.hyperledger.fabric.gateway.Gateway;
 import org.hyperledger.fabric.gateway.Network;
 import org.hyperledger.fabric.sdk.Channel;
@@ -34,15 +22,30 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
+
+import java.io.IOException;
+import java.nio.file.Paths;
+import java.util.Collection;
+import java.util.LinkedList;
+import java.util.Optional;
+import java.util.Set;
+
+import static java.lang.String.format;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.fail;
 
 @SpringBootTest
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+@ActiveProfiles("intg")
 public class SmartContractIT {
 
   @Autowired ChaincodeOperationsService chaincodeOperationsService;
   @Autowired private HFClientWrapper hfClientWrapper;
   @Autowired private Gateway gateway;
-  private static final String CHANNEL_NAME = "test1";
+  private static final String CHANNEL_NAME = "test2";
   private static final String CHAINCODE_NAME = "example-cc-1";
   private static final String CHAINCODE_VERSION = "1";
 

@@ -34,10 +34,6 @@ peers:
         Is+JTNel553pX5pi5ecfl+LPyvB/zWB23AGzAiAWj8egI/bieJCzFJw1lZvn9WzX
         5p56JI3CN5Xobf4khQ==
         -----END CERTIFICATE-----
-
-    grpcOptions:
-      ssl-target-name-override: peer1.org1.example.com
-      hostnameOverride: peer1.org1.example.com
 certificateAuthorities:
   ca.org1.example.com:
     url: https://localhost:7054
